@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		body {
+			background: url(wallpaper.jpg);
+			background-attachment: fixed;
+			/* prepare for the blurry piece to add */
+			background-size: 100vw auto;
+			margin: 0;
+			min-height: 100vh;
+			display: flex;
+		}
+
+		.box::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			filter: blur(10px);
+			background: url(wallpaper.jpg);
+			background-attachment: fixed;
+			background-size: 100vw auto;
+		}
+
+		/* Box */
+		.box {
+			margin: auto;
+			z-index: 1;
+			position: relative;
+			width: 480px;
+			height: 288px;
+
+			border-radius: 26px;
+			padding: 20px;
+			overflow: hidden;
+		}
+
+		/* Name And Contact  */
+		.lines {
+			margin-top: 81px;
+			margin-left: 43px;
+			display: inline-block;
+		}
+		.lines p {
+			color: snow;
+		}
+
+		#line1 p {
+			font-size: 30px;
+			margin: 10px auto;
+
+			font-family: "Roboto", sans-serif;
+		}
+		#line2 p {
+			font-size: 18px;
+			font-family: "Roboto", sans-serif;
+		}
+
+		/* Icons */
+		#img1 {
+			margin-top: 8px;
+			margin-left: 43px;
+			border-radius: 30px;
+
+			width: 72px;
+		}
+
+		.img {
+			display: inline-block;
+		}
+		#img2 {
+			width: 42px;
+			height: 58px;
+			transform: rotate(90deg);
+			margin-left: 196px;
+			margin-bottom: -42px;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div><img id="img1" src="testing_1.jpg" alt="" /></div>
+			<div class="lines">
+				<div id="line1">
+					<p>6283710701</p>
+				</div>
+				<div id="line2">
+					<p>RITIK GAUR</p>
+				</div>
+			</div>
+			<div class="img">
+				<img id="img2" src="wifi.png" alt="" />
+			</div>
+		</div>
+	</body>
+</html>
